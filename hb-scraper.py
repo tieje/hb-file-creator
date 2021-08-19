@@ -6,6 +6,7 @@ from selenium import webdriver
 import os
 from sys import argv
 import json
+import shlex
 
 # Edit this path to where to where you cloned the repo
 user_path = '/Users/thomasfrancis/Documents/hb-file-creator/'
@@ -24,7 +25,7 @@ if info['password'] == '':
     print('Password is missing in login-info.json file.')
     missing = True
 if missing:
-    exit
+    exit()
 
 # Begin web scraping
 chrome_options = Options()
@@ -57,9 +58,12 @@ print('login successful')
 all_file_names = driver.find_elements_by_xpath('//html/body/main/article/div/div/div/div/div[3]/div/ul/li[3]/code')
 os.chdir(argv[1])
 for elm in all_file_names:
-    path = os.path.join(argv[1], elm.text)
-    if os.path.exists(path):
-        print(elm.text + ' already exists.')
-    else:
-        f = open(path, 'w')
-        f.close()
+    file_list = shlex.split(elm.text)
+    for name in file_list:
+        no_com = name.replace(',', '')
+        path = os.path.join(argv[1], no_com)
+        if os.path.exists(path):
+            print(no_com + ' already exists.')
+        else:
+            f = open(path, 'w')
+            f.close()
