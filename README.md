@@ -5,7 +5,7 @@
 This project creates files for holberton projects in your current directory.
 The first argument needs to the url of the project.
 
-##Installation
+## Installation
 
 1. Run `pip3 install selenium`
 
