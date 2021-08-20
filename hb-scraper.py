@@ -67,3 +67,7 @@ for elm in all_file_names:
         else:
             f = open(path, 'w')
             f.close()
+readme_path = os.path.join(argv[1], 'README.md')
+f = open(readme_path, 'a')
+f.write('Some or all files in this repo were generated using [hb-file-creator](https://github.com/tieje/hb-file-creator)')
+f.close()
