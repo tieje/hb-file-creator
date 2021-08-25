@@ -56,11 +56,15 @@ print(argv)
 driver.get(argv[2])
 print('login successful')
 all_file_names = driver.find_elements_by_xpath('//html/body/main/article/div/div/div/div/div[3]/div/ul/li[3]/code')
+if all_file_names == []:
+    all_file_names = driver.find_elements_by_xpath('//html/body/main/article/div/div/div/div/div[3]/div/ul/li[2]/code')
+print('Files found:')
 os.chdir(argv[1])
 for elm in all_file_names:
     file_list = shlex.split(elm.text)
     for name in file_list:
         no_com = name.replace(',', '')
+        print(no_com)
         path = os.path.join(argv[1], no_com)
         if os.path.exists(path):
             print(no_com + ' already exists.')
