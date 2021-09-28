@@ -18,12 +18,12 @@ The first argument needs to the url of the project.
 
 ### For Linux
 
-Edit and run the following:
+Edit the `path/to/` part of the following command and run it:
 
 `printf "alias hb=\'python3 /path/to/hb-scraper.py \"\$PWD\"'\n" >> "$HOME"/.bashrc`
 ### For M1 Mac
 
-Edit and run the following:
+Edit the `path/to/` part of the following command and run it:
 
 `printf "alias hb=\'python3 /path/to/hb-scraper.py \"\$PWD\"'\n" >> "$HOME"/.zshrc` 
 
