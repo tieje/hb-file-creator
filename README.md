@@ -27,6 +27,7 @@ Edit the `path/to/` part of the following command and run it:
 
 `printf "alias hb=\'python3 /path/to/hb-scraper.py \"\$PWD\"'\n" >> "$HOME"/.zshrc` 
 
+Unfortunately, you'll need to delete the `\` after `hb=` I can't get around this.
 For reference check out [MyAlias](https://github.com/tieje/MyAliases) repo.
 ### For Windows
 
