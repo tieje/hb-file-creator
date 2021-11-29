@@ -12,7 +12,7 @@ The first argument needs to the url of the project.
 2. Type your email and password used for your holberton login in the `login-info.json` file
 
 3. Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) that matches your version of chrome browser \(Options > Help > About Chrome\).
-#### Move chromedriver to this folder
+### Move chromedriver to this folder
 
 ## Create an alias
 
@@ -42,4 +42,3 @@ For mac users, you might have additional chrome browsers running in the backgrou
 
 - If it's not working, try changing the headless option on line 28 to `False`. This used to happen on Windows but hopefully Selenium fixed it since the last time I used it.
 - The chromedriver version does not need to be exact but it needs to be "close enough"
-Some or all files in this repo were generated using [hb-file-creator](https://github.com/tieje/hb-file-creator)Some or all files in this repo were generated using [hb-file-creator](https://github.com/tieje/hb-file-creator)Some or all files in this repo were generated using [hb-file-creator](https://github.com/tieje/hb-file-creator)
