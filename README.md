@@ -1,9 +1,11 @@
 # hb-file-creator
 
+## Command line usage:
+
 `hb <holberton_project_url>`
 
 This project creates files for holberton projects in your current directory.
-The first argument needs to the url of the project.
+The first argument needs to be the url of the project.
 
 ## Installation
 
@@ -21,6 +23,7 @@ The first argument needs to the url of the project.
 Edit the `path/to/` part of the following command and run it:
 
 `printf "alias hb=\'python3 /path/to/hb-scraper.py \"\$PWD\"'\n" >> "$HOME"/.bashrc`
+
 ### For M1 Mac
 
 Edit the `path/to/` part of the following command and run it:
@@ -29,6 +32,7 @@ Edit the `path/to/` part of the following command and run it:
 
 Unfortunately, you'll need to delete the `\` after `hb=` I can't get around this.
 For reference check out [MyAlias](https://github.com/tieje/MyAliases) repo.
+
 ### For Windows
 
 Maybe I'll put this in someday.
@@ -43,3 +47,7 @@ For mac users, you might have additional chrome browsers running in the backgrou
 
 - If it's not working, try changing the headless option on line 28 to `False`. This used to happen on Windows but hopefully Selenium fixed it since the last time I used it.
 - The chromedriver version does not need to be exact but it needs to be "close enough"
+
+## Alternatives
+
+[keysmusician](https://github.com/keysmusician) has created a chrome extension HTML GUI alternative called [holberton-file-downloader-chrome-extension](https://github.com/keysmusician/holberton-file-downloader-chrome-extension) that basically achieves the same result with less configuration. Both methods rely on the chrome browser.
